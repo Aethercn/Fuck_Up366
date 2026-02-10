@@ -125,7 +125,7 @@ def main_process():
         return
 
     window = tk.Tk()
-    window.title(f"分析结果 - 共 {len(Outs)} 题")
+    window.title(f"成功了就来Github给我点个 Star 吧！ - 共 {len(Outs)} 题")
     window.attributes("-topmost", True)
     window.geometry("600x600")
 
@@ -152,4 +152,5 @@ if __name__ == "__main__":
         print(f"\n又发生啥事了啊: {e}")
         import traceback
         traceback.print_exc()
+
         input("按回车键退出...")
