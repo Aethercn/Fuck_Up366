@@ -1,6 +1,6 @@
 # 🥚 Up366 Egg Cracker (天学网听力砸蛋器)
 
-**天学网/Up366 听力答案一键提取工具** 支持 **Windows/Mac(未测试)** (抓包法) 和 **Android** (无需ROOT，直读法/抓包法)！
+**天学网/Up366 听力答案一键提取工具** 支持 **Windows** (抓包法) 和 **Android** (无需ROOT，直读法/抓包法)！
 
 > **关于本项目** > 这是一个用于提取天学网（Up366）听力练习答案的 Python 工具。  
 > 核心思路来自 B站 视频 [BV1bVGVzNEtA](https://www.bilibili.com/video/BV1bVGVzNEtA/)中的脚本，代码由本仓库作者编写及优化。  
