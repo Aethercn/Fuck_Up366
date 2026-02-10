@@ -1,7 +1,7 @@
 # Up366 听力答案提取工具 (Up366_Egg_Cracker)
 天学网/Up366听力答案获取，支持电脑和手机！（手机无需ROOT）  
 这是一个用于提取天学网（Up366）听力练习答案的 Python 工具。思路来自B站BV1bVGVzNEtA，代码由我编写  
-支持PC和Android（还在做），PC用户请使用Up366_Egg_Cracker_PC  Android用户请使用Up366_Egg_Cracker_Android
+支持PC和Android，PC用户请使用Up366_Egg_Cracker_PC  Android用户请使用Up366_Egg_Cracker_Android
 
 ## PC端使用方法
 1.确保安装了 Python 3并配置好了PATH。  
@@ -16,8 +16,26 @@
 10. 选择解压后的包含 `questions` 目录的文件夹（通常叫 `2`）。  
 11. 查看答案  
 
-## Android端使用方法
-等会写，总之要用到MT管理器
+## Android 端使用方法
+
+支持两种模式：**自动扫描** (推荐) 和 **手动指定路径** (高版本安卓/抓包党)。
+
+### 模式一：自动扫描 (适合 Android 10及以下 或 已Root/MT管理器)
+1. 确保已在天学网 App 内下载了听力题目。
+2. 打开 **MT管理器**，找到 `Up366_Egg_Cracker_Android.py` 并运行。
+3. 脚本会自动定位你刚刚下载的那套题目并显示答案。
+   > *如果脚本提示“自动扫描失败”，它会自动进入模式二。*
+
+### 模式二：手动指定路径 (适合 Android 11+ 或 抓包用户)
+如果你的手机无法访问 `/Android/data`，或者你通过抓包下载了 `Pc.zip`：
+1. **抓包用户**：解压 `Pc.zip` 到手机任意目录（例如 `/sdcard/Download/english/`）。
+2. **高版本用户**：在 MT管理器中，长按题目所在的文件夹 -> 属性 -> **复制路径**。
+   - *目标文件夹通常包含 `questions` 目录。*
+3. 运行脚本，当提示“请输入文件夹路径”时，**粘贴**刚才复制的路径并回车。
+
+**常见问题  
+- **提示 Permission denied**：请尝试使用手动模式，将题目移动到 `/sdcard/Download/` 等无权限限制的目录下操作。  
+- **找不到题目**：请确保你选择的文件夹里（或子文件夹里）包含 `.js` 文件。  
 
 ## Tips
 建议您低调使用，不建议张扬  
