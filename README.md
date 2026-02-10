@@ -1,6 +1,6 @@
 # 🥚 Up366 Egg Cracker (天学网听力砸蛋器)
 
-**天学网/Up366 听力答案一键提取工具** 支持 **Windows/Mac** (抓包法) 和 **Android** (无需ROOT，直读法/抓包法)！
+**天学网/Up366 听力答案一键提取工具** 支持 **Windows/Mac(未测试)** (抓包法) 和 **Android** (无需ROOT，直读法/抓包法)！
 
 > **关于本项目** > 这是一个用于提取天学网（Up366）听力练习答案的 Python 工具。  
 > 核心思路来自 B站 视频 [BV1bVGVzNEtA](https://www.bilibili.com/video/BV1bVGVzNEtA/)中的脚本，代码由本仓库作者编写及优化。  
@@ -10,7 +10,7 @@
 
 ## 📂 文件说明
 * `Up366_Egg_Cracker_PC.py`: **电脑端主程序** (需配合抓包工具)
-* `Up366_Egg_Cracker_Android.py`: **安卓端主程序** (需配合 MT管理器)
+* `Up366_Egg_Cracker_Android.py`: **安卓端主程序** (需配合 MT管理器和Termux)
 
 ---
 
@@ -44,29 +44,32 @@
 
 ## 📱 Android 端使用方法 (无需 Root)
 
-用MT管理器直接读取`/Android/data/com.up366.mobile/files/flipbook/随机/随机/2/`下的答案
+### 1. 准备工作
+1.  下载并安装 **MT管理器和Termux** (用于搬运文件)。
+2.  下载本仓库的 `Up366_Egg_Cracker_Android.py`。
 
-### 📌 准备工作
-下载并安装 **MT管理器** (或其他能访问 `/Android/data` 的文件管理器)。
+### 2. 环境铺设 (首次使用必读)
+*为了让脚本能读取到文件，必须先进行此步操作。*
+1. 打开 MT管理器，进入路径：`/Android/data/com.up366.mobile/files/`
+2. 检查该目录下是否有 `flipbook` 文件夹。
+   * **如果没有**：请务必**手动新建**一个名为 `flipbook` 的文件夹。
+3. 打开天学网 App，**下载**（或清除应用数据并重建`flipbook` 文件夹后重新下载）你要做的听力题。
+   * *原理：只有预先创建了 `flipbook` 文件夹，App 才会将题目下载到这个可访问的目录中。*
 
-### 🛠️ 步骤一：环境铺设 (仅首次需要)
-1.  在 MT管理器 中找到并点击运行 `Up366_Egg_Cracker_Android.py`。
-2.  **脚本会自动检测环境**：
-    * 如果提示检测不到 `flipbook` 文件夹，脚本会尝试**自动创建**。
-    * *注：如果因系统限制（Android 11+）导致自动创建失败，请按脚本提示手动在 `/Android/data/com.up366.mobile/files/` 下新建名为 `flipbook` 的文件夹。*
-3.  环境创建成功后，脚本会暂停，请退出脚本。
+### 3. 提取答案
+1. **定位题目**：在 MT管理器中进入`/Android/data/com.up366.mobile/files/flipbook/随机/随机/`，找到一个包含 `questions` 目录的文件夹（通常名为 `2`）。
+2. 把包含 `questions` 目录（通常名为 `2`）的文件夹复制到Downloads(普通目录均可)
+3. **放入脚本**：把 `Up366_Egg_Cracker.py` **复制**或**移动**到这个 `2` 文件夹内。
+   * *注意：脚本必须和 `questions` 目录在同一级。*
 
-### 📥 步骤二：下载题目
-1.  打开天学网 App。
-2.  **下载**（或清楚应用数据后重新下载）你要做的听力题。
-    * *原理：只有在 flipbook 文件夹存在**之后**下载的题目，App 才会将其保存在我们能访问的目录中。*
+### 3. 运行脚本
 
-### 🔓 步骤三：一键提取
-1.  回到 MT管理器，**再次运行** `Up366_Egg_Cracker_Android.py`。
-2.  脚本会自动定位你刚刚下载的那套题（自动识别最新的题目），并直接显示答案。
-
-> **💡 备用方案 (手动模式)** > 如果你无法访问 data 目录(如部分Android 13/14 用户)，或者你是通过手机抓包下载的 zip：  
-> 运行脚本后，如果自动扫描失败，会进入**手动模式**。你可以将包含 `questions` 的文件夹（2）路径复制粘贴进去进行解析。
+#### 使用 Termux
+1.  打开 Termux，输入 `termux-setup-storage` 并允许权限。
+2.  进入``/storage/emulated/0/Download/2/``：
+    ``cd /storage/emulated/0/Download/2/``
+3.  输入命令运行脚本 (假设脚本也在 Download 目录)：
+    `python Up366_Egg_Cracker_Android.py`
 
 ---
 
