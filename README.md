@@ -1,4 +1,4 @@
-# Up366 听力答案提取工具 (Up366-Answer-Extractor/Up366_Egg_Cracker)
+# Up366 听力答案提取工具 (Up366_Egg_Cracker)
 天学网/Up366听力答案获取，支持电脑和手机！（手机无需ROOT）  
 这是一个用于提取天学网（Up366）听力练习答案的 Python 工具。思路来自B站BV1bVGVzNEtA，代码由我编写  
 支持PC和Android（还在做），PC用户请使用Up366_Egg_Cracker_PC  Android用户请使用Up366_Egg_Cracker_Android
