@@ -14,6 +14,13 @@
 
 ---
 
+## 📺 视频教程
+
+[![还没录](https://github.com/user-attachments/assets/placeholder-image)](https://www.bilibili.com/video/BV1w64y127gu/)
+> **[还没录] 还没录** > *点击上方图片或 [此处链接](https://www.bilibili.com/video/BV1w64y127gu/) 跳转至 Bilibili 观看演示*
+
+---
+
 ## 🖥️ PC 端使用方法
 
 适用于 Windows / MacOS，原理是通过抓包获取题目下载链接。
