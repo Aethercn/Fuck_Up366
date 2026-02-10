@@ -68,7 +68,7 @@
 1.  打开 Termux，输入 `termux-setup-storage` 并允许权限。
 2.  进入``/storage/emulated/0/Download/2/``：
     ``cd /storage/emulated/0/Download/2/``
-3.  输入命令运行脚本 (假设脚本也在 Download 目录)：
+3.  输入命令运行脚本：
     `python Up366_Egg_Cracker_Android.py`
 
 ---
