@@ -1,7 +1,7 @@
 # Up366 听力答案提取工具 (Up366-Answer-Extractor/Fuck_Up366)
-天学网/Up366听力答案获取，，支持电脑和手机！（手机无需ROOT）目前仅支持获取听力答案
+天学网/Up366听力答案获取，支持电脑和手机！（手机无需ROOT）目前仅支持获取听力答案
 这是一个用于提取天学网（Up366）听力练习答案的 Python 工具。思路来自B站BV1bVGVzNEtA，代码由我编写
-支持PC和Android，PC用户请使用Fuck_Up366_PC  Android用户请使用Fuck_Up366_Android
+支持PC和Android（还在做），PC用户请使用Fuck_Up366_PC  Android用户请使用Fuck_Up366_Android
 
 ## 前置准备 (非常重要！)
 正如脚本提示所述，你需要先获取源文件：
@@ -18,7 +18,7 @@
 4. 查看答案
 
 ## Android端使用方法
-等会写
+等会写，总之就是要用到MT管理器
 
 ## Tips
 建议您低调使用，不建议张扬
